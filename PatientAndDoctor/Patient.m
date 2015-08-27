@@ -26,25 +26,14 @@
 
 - (void) visitDoctor:(Doctor *)doctor {
     
-    if (self.healthCard) {
-        [doctor acceptPatient:self];
-    }
-    
-    else {
-        NSLog(@"I'm sorry, I can't accept patients without health cards");
-    }
+    [doctor acceptPatient:self];
+
 }
 
-//- (void) askDoctor:(Doctor *) doctor AQuestion:(NSString *) aQuestion {
-//    if ([aQuestion isEqualToString:@"name"]) {
-//        NSLog(@"Hello, my name is Dr. %@",doctor.name);
-//    }
-//    else if ([aQuestion isEqualToString:@"specialization"]) {
-//        NSLog(@"My sepcialization is %@",doctor.specialization);
-//    }
-//    else {
-//        NSLog(@"I don't know the answer to that");
-//    }
-//}
+- (void) requestMedication:(Doctor *)doctor {
+    
+    [doctor fillPerscription:self];
+}
+
 
 @end

@@ -17,6 +17,8 @@ int main(int argc, const char * argv[]) {
         Doctor *newDoctor = [[Doctor alloc] initWithName:@"Sigmund Freud" Specialization:@"Psychiatry"];
         
         [newPatient visitDoctor:newDoctor];
+        
+        [newPatient requestMedication:newDoctor];
 
     }
     return 0;

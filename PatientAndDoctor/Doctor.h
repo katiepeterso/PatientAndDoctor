@@ -13,12 +13,12 @@
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *specialization;
-@property (nonatomic) NSMutableSet *patientList;
+
 
 - (instancetype)initWithName:(NSString *)name Specialization:(NSString *)specialization;
 
 - (void) acceptPatient:(Patient *)patient;
 
-//- (void)askPatient:(Patient *)patient AQuestion:(NSString *)aQuestion;
+- (void) fillPerscription:(Patient *)patient;
 
 @end

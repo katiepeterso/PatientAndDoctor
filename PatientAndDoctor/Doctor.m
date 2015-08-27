@@ -9,6 +9,10 @@
 #import "Doctor.h"
 #import "Patient.h"
 
+@interface Doctor()
+@property (nonatomic) NSMutableSet *patientList;
+@end
+
 @implementation Doctor
 
 - (instancetype)initWithName:(NSString *)name Specialization:(NSString *)specialization
@@ -17,35 +21,32 @@
     if (self) {
         self.name = name;
         self.specialization = specialization;
+        self.patientList = [NSMutableSet new];
     }
     return self;
 }
 
 - (void)acceptPatient:(Patient *)patient {
-    NSLog(@"I can accept you as a patient, %@", patient.name);
+    
+    if (patient.healthCard) {
+        NSLog(@"I can accept you as a patient, %@", patient.name);
+        [self.patientList addObject:patient];
+    }
+    
+    else {
+        NSLog(@"I'm sorry, I can't accept patients without health cards");
+    }
 }
 
-//- (void)askPatient:(Patient *)patient AQuestion:(NSString *)aQuestion {
-//    if ([aQuestion isEqualToString:@"name"]) {
-//        NSLog(@"Hello, my name is %@",patient.name);
-//    }
-//    else if ([aQuestion isEqualToString:@"age"]) {
-//        NSLog(@"I am %ld years old",patient.age);
-//    }
-//    else if ([aQuestion isEqualToString:@"gender"]) {
-//        NSLog(@"I am a %@",patient.gender);
-//    }
-//    else if ([aQuestion isEqualToString:@"preexisting medical conditions"]) {
-//        for (NSString *medical in patient.preexistingMedicalConditions) {
-//            NSLog(@"I have %@ preexisting medical condition",medical);
-//        }
-//    }
-//    else if ([aQuestion isEqualToString:@"insurance provider"]) {
-//        NSLog(@"My insurance provider is %@",patient.insuranceProvider);
-//    }
-//    else {
-//        NSLog(@"I don't know the answer to that");
-//    }
-//}
+- (void) fillPerscription:(Patient *)patient {
+    
+    if ([self.patientList containsObject:patient]) {
+        NSLog(@"Okay, I'll get you some meds");
+    }
+    
+    else {
+        NSLog(@"Sorry, you're not my patient");
+    }
+}
 
 @end

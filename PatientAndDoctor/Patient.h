@@ -22,6 +22,8 @@
 
 - (void) visitDoctor:(Doctor *)doctor;
 
+- (void) requestMedication:(Doctor *)doctor;
+
 //- (void) askDoctor:(Doctor *) doctor AQuestion:(NSString *) aQuestion;
 
 @end
