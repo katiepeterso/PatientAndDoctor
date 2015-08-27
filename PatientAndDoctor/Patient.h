@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Patient.h"
 
 @interface Patient : NSObject
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) int age;
 @property (nonatomic) NSString *gender;
-@property (nonatomic) NSArray *existingMedicalConditions;
+@property (nonatomic) NSArray *preexistingMedicalConditions;
 @property (nonatomic) NSString *insuranceProvider;
 
 @end

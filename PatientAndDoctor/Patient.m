@@ -10,4 +10,17 @@
 
 @implementation Patient
 
+- (instancetype)initWithName:(NSString *)name Age:(int)age Gender:(NSString *)gender PreexistingMedicalConditions:(NSArray *)prexistingMedicalConditions InsuranceProvider:(NSString *)insuranceProvider
+{
+    self = [super init];
+    if (self) {
+        self.name = name;
+        self.age = age;
+        self.gender = gender;
+        self.preexistingMedicalConditions = prexistingMedicalConditions;
+        self.insuranceProvider = insuranceProvider;
+    }
+    return self;
+}
+
 @end

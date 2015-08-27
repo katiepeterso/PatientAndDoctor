@@ -10,4 +10,14 @@
 
 @implementation Doctor
 
+- (instancetype)initWithName:(NSString *)name Specialization:(NSString *)specialization
+{
+    self = [super init];
+    if (self) {
+        self.name = name;
+        self.specialization = specialization;
+    }
+    return self;
+}
+
 @end
