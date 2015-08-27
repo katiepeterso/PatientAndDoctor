@@ -12,6 +12,7 @@
 
 @interface Doctor()
 @property (nonatomic) NSMutableSet *patientList;
+@property (nonatomic) NSMutableDictionary *perscriptionMasterList;
 
 - (void)updatePerscriptionList:(NSArray *)perscriptions For:(NSString *)patientName;
 
@@ -20,13 +21,14 @@
 
 @implementation Doctor
 
-- (instancetype)initWithName:(NSString *)name Specialization:(NSString *)specialization
+- (instancetype)initWithName:(NSString *)name Specialization:(NSString *)specialization PerscriptionDictionary:(NSMutableDictionary *)perscriptionDictionary
 {
     self = [super init];
     if (self) {
         self.name = name;
         self.specialization = specialization;
         self.patientList = [NSMutableSet new];
+        self.perscriptionMasterList = perscriptionDictionary;
     }
     return self;
 }
@@ -52,7 +54,7 @@
             [prescriptionList addObject:perscription];
             NSLog(@"Here is your perscription for %@", perscription);
         }
-        
+        [self updatePerscriptionList:prescriptionList For:patient.name];
     }
     
     else {
@@ -63,8 +65,8 @@
 }
 
 - (void)updatePerscriptionList:(NSArray *)perscriptions For:(NSString *)patientName {
-    [
     
+    [self.perscriptionMasterList setObject:perscriptions forKey:patientName];
 }
 
 @end

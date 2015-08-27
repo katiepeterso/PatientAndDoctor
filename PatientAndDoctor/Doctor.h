@@ -16,7 +16,7 @@
 @property (nonatomic) NSDictionary *pharmDictionary;
 
 
-- (instancetype)initWithName:(NSString *)name Specialization:(NSString *)specialization;
+- (instancetype)initWithName:(NSString *)name Specialization:(NSString *)specialization PerscriptionDictionary:(NSMutableDictionary *)perscriptionDictionary;
 
 - (void) acceptPatient:(Patient *)patient;
 
