@@ -10,6 +10,7 @@
 		AAD5D4431B8F748F000D59AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD5D4421B8F748F000D59AB /* main.m */; };
 		AAD5D44B1B8F74CF000D59AB /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD5D44A1B8F74CF000D59AB /* Patient.m */; };
 		AAD5D44E1B8F7556000D59AB /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD5D44D1B8F7556000D59AB /* Doctor.m */; };
+		AAD5D4511B8FB519000D59AB /* PatientRecords.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD5D4501B8FB519000D59AB /* PatientRecords.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		AAD5D44A1B8F74CF000D59AB /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 		AAD5D44C1B8F7556000D59AB /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
 		AAD5D44D1B8F7556000D59AB /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+		AAD5D44F1B8FB519000D59AB /* PatientRecords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientRecords.h; sourceTree = "<group>"; };
+		AAD5D4501B8FB519000D59AB /* PatientRecords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientRecords.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				AAD5D4421B8F748F000D59AB /* main.m */,
+				AAD5D44F1B8FB519000D59AB /* PatientRecords.h */,
+				AAD5D4501B8FB519000D59AB /* PatientRecords.m */,
 				AAD5D4491B8F74CF000D59AB /* Patient.h */,
 				AAD5D44A1B8F74CF000D59AB /* Patient.m */,
 				AAD5D44C1B8F7556000D59AB /* Doctor.h */,
@@ -130,6 +135,7 @@
 			files = (
 				AAD5D4431B8F748F000D59AB /* main.m in Sources */,
 				AAD5D44B1B8F74CF000D59AB /* Patient.m in Sources */,
+				AAD5D4511B8FB519000D59AB /* PatientRecords.m in Sources */,
 				AAD5D44E1B8F7556000D59AB /* Doctor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

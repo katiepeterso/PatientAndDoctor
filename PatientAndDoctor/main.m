@@ -13,8 +13,10 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Patient *newPatient = [[Patient alloc] initWithName:@"Katie" Age:31 Gender:@"Female" PreexistingMedicalConditions:@[@"warts", @"bed sores"] InsuranceProvider:YES];
+        Patient *newPatient = [[Patient alloc] initWithName:@"Katie" Age:31 Symptoms:@[@"warts", @"bed sores"] InsuranceProvider:YES];
         Doctor *newDoctor = [[Doctor alloc] initWithName:@"Sigmund Freud" Specialization:@"Psychiatry"];
+        
+        newDoctor.pharmDictionary = @{@"warts":@"Salicylic acid", @"bed sores":@"polysporin"};
         
         [newPatient visitDoctor:newDoctor];
         

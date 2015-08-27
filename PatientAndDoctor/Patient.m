@@ -11,14 +11,13 @@
 
 @implementation Patient
 
-- (instancetype)initWithName:(NSString *)name Age:(NSInteger)age Gender:(NSString *)gender PreexistingMedicalConditions:(NSArray *)prexistingMedicalConditions InsuranceProvider:(BOOL)healthCard
+- (instancetype)initWithName:(NSString *)name Age:(NSInteger)age Symptoms:(NSArray *)symptoms InsuranceProvider:(BOOL)healthCard
 {
     self = [super init];
     if (self) {
         self.name = name;
         self.age = age;
-        self.gender = gender;
-        self.preexistingMedicalConditions = prexistingMedicalConditions;
+        self.symptoms = symptoms;
         self.healthCard = healthCard;
     }
     return self;
@@ -32,7 +31,7 @@
 
 - (void) requestMedication:(Doctor *)doctor {
     
-    [doctor fillPerscription:self];
+    [doctor writePerscription:self];
 }
 
 

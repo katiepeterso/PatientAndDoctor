@@ -13,12 +13,13 @@
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *specialization;
+@property (nonatomic) NSDictionary *pharmDictionary;
 
 
 - (instancetype)initWithName:(NSString *)name Specialization:(NSString *)specialization;
 
 - (void) acceptPatient:(Patient *)patient;
 
-- (void) fillPerscription:(Patient *)patient;
+- (NSMutableArray *) writePerscription:(Patient *)patient;
 
 @end

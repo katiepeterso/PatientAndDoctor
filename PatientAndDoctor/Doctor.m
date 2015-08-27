@@ -8,9 +8,14 @@
 
 #import "Doctor.h"
 #import "Patient.h"
+#import "PatientRecords.h"
 
 @interface Doctor()
 @property (nonatomic) NSMutableSet *patientList;
+
+- (void)updatePerscriptionList:(NSArray *)perscriptions For:(NSString *)patientName;
+
+
 @end
 
 @implementation Doctor
@@ -38,15 +43,28 @@
     }
 }
 
-- (void) fillPerscription:(Patient *)patient {
+- (NSMutableArray *) writePerscription:(Patient *)patient{
+    NSMutableArray *prescriptionList = [NSMutableArray new];
     
     if ([self.patientList containsObject:patient]) {
-        NSLog(@"Okay, I'll get you some meds");
+        for (NSString *symptoms in patient.symptoms) {
+            NSString *perscription = [self.pharmDictionary objectForKey:symptoms];
+            [prescriptionList addObject:perscription];
+            NSLog(@"Here is your perscription for %@", perscription);
+        }
+        
     }
     
     else {
         NSLog(@"Sorry, you're not my patient");
     }
+    
+    return prescriptionList;
+}
+
+- (void)updatePerscriptionList:(NSArray *)perscriptions For:(NSString *)patientName {
+    [
+    
 }
 
 @end
